@@ -73,6 +73,7 @@ header nav ul li a {
     right: 3%;
 }
 
+/* Caja nuevo Tweet */
 .search-box input {
     border: .5px solid #6f7d86;
     border-radius: 20px;
@@ -80,6 +81,7 @@ header nav ul li a {
     background-color: #f5f8fa;
     font-size: .75em;
     padding: 0 15px;
+    align-content: top;
 }
 
 .search-box input:focus {
@@ -96,35 +98,47 @@ main {
 }
 
 #new-tweet-box {
-    height: 60px;
     padding: 15px;
+    overflow: auto;
+    background-color: #EAF6FD;
 }
 
-#new-tweet {
+.new-tweet {
     border-radius: 10px;
     border: .5px solid #83CBF7;
     height: 36px;
-    width: 90%;
+    width: 100%;
     padding: 10px;
     margin: 0 auto;
     display: block;
+    transition-duration: .25s;
+    resize: none;
+    overflow: hidden;
 }
 
-#new-tweet:focus{
+.new-tweet:focus{
     outline: none;
 }
 
-button {
+.expand-box {
+    height: 75px;
+}
+
+
+#submit-tweet {
     height: 30px;
     background-color: #1DA1F2;
     color: #fff;
     border: none;
     border-radius: 15px;
+    margin-top: 15px;
     padding: 0 15px;
     font-weight: 900;
     cursor: pointer;
+    float: right;
+    display: none;
 }
 
-button:hover {
+#submit-tweet:hover {
     background-color: #1B93DC;
 }
