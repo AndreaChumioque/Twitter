@@ -27,6 +27,14 @@ nav ul li {
     display: inline-block;
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 /* Estilos header */
 header {
     position: fixed;
@@ -103,21 +111,20 @@ header nav ul li a {
     background-color: #EAF6FD;
 }
 
-.new-tweet {
+textarea {
     border-radius: 10px;
     border: .5px solid #83CBF7;
-    height: max-content;
     width: 100%;
-    height: 36px;
     padding: 10px;
     margin: 0 auto;
     display: block;
-    transition-duration: .25s;
     resize: none;
     overflow: hidden;
+    transition-duration: .25s;
+    height: 36px;
 }
 
-.new-tweet:focus{
+textarea:focus{
     outline: none;
 }
 
@@ -125,7 +132,7 @@ header nav ul li a {
     height: 50px;
 }
 
-#add-tweet {
+#tweet-btn {
     height: 30px;
     background-color: #1DA1F2;
     color: #fff;
@@ -136,11 +143,23 @@ header nav ul li a {
     font-weight: 900;
     cursor: pointer;
     float: right;
-    display: none;
 }
 
-#add-tweet:hover {
+#tweet-btn:focus {
+    outline: none;
+}
+
+#tweet-btn:hover {
     background-color: #1B93DC;
+}
+
+#tweet-btn:disabled {
+    background-color: #98D4F9;
+    cursor: not-allowed;
+}
+
+#tweet-btn:disabled:hover {
+    background-color: #98D4F9;
 }
 
 #total-char {
@@ -148,11 +167,16 @@ header nav ul li a {
     font-weight: 600;
     color: #6f7d86;
     margin: 15px 0;
-    display: none;
 }
 
 /* Estilos newsfeed */
 #newsfeed {
     background-color: #fff;
     height: fill-available;
+}
+
+#newsfeed div {
+    padding: 15px;
+    font-size: .8em;
+    border-bottom: .5px solid #D5EDFC;
 }
