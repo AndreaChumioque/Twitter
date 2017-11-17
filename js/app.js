@@ -55,7 +55,6 @@ function countChar(event) {
       totalChar.style.color = '';
   }
 }
-
 // Función para reajustar el tamaño de tweetBox
 function adjustHeight(event) {
   // if (textTweet.scrollHeight) {
@@ -67,6 +66,12 @@ function adjustHeight(event) {
   //   textTweet.style.height = '47px';
   //   textTweet.style.height = textTweet.scrollHeight + 'px';
   // }
+
+    if (event.keycode == 13) {
+      var currentHeight = textTweet.scrollHeight + 16;
+      var height = currentHeight.toString();
+      textTweet.style.height = height + 'px';       
+    }  
 }
 
 // Función para agregar tweet nuevo al newsfeed
