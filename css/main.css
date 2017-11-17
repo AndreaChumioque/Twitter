@@ -125,17 +125,17 @@ textarea {
     resize: none;
     overflow: hidden;
     transition-duration: .25s;
-    /* height: calc(1em + 25px); */
-    height: 2.75em;
+    /* height: 2.75em; */
 }
 
 textarea:focus{
     outline: none;
 }
 
-.expand-box {
+/* .expand-box {
     height: 3.75em;
-}
+    overflow: hidden;
+} */
 
 #tweet-btn {
     height: 30px;

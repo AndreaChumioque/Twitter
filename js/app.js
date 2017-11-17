@@ -3,8 +3,8 @@ var totalChar = document.getElementById('total-char');
 var tweetBtn = document.getElementById('tweet-btn');
 var newsfeed = document.getElementById('newsfeed');
 
-
 var charCounter = 0;
+var height = textTweet.getAttribute('rows');
 
 window.addEventListener('click', checkClickOut);
 textTweet.addEventListener('click', expandTweetBox);
@@ -35,8 +35,8 @@ function checkClickOut(event) {
 function countChar(event) {
   charCounter = textTweet.value.length;
   totalChar.textContent = 140 - charCounter;
-  console.log(charCounter);
-  if (charCounter > 0 && charCounter <=140) {
+  // console.log(charCounter);
+  if (charCounter > 0 && charCounter <= 140) {
     tweetBtn.disabled = false;
   } else tweetBtn.disabled = true;
 
@@ -67,11 +67,12 @@ function adjustHeight(event) {
   //   textTweet.style.height = textTweet.scrollHeight + 'px';
   // }
 
-    if (event.keycode == 13) {
-      var currentHeight = textTweet.scrollHeight + 16;
-      var height = currentHeight.toString();
-      textTweet.style.height = height + 'px';       
-    }  
+  if (event.keyCode === 13) {
+    textTweet.setAttribute('rows', parseInt(height) + 1);
+
+    console.log(event.keyCode);
+  }
+
 }
 
 // Función para agregar tweet nuevo al newsfeed
@@ -82,7 +83,7 @@ function addTweet(event) {
   if (newsfeed.children.length == 0)
     newsfeed.appendChild(newTweet);
   else newsfeed.insertBefore(newTweet, newsfeed.firstElementChild)
-  
+
   // Resetear textTweet al estado inicial
   textTweet.value = '';
   textTweet.className = '';
