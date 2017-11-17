@@ -6,7 +6,9 @@
     <title>Twitter</title>
 </head>
 <body>
+    <!-- Encabezado fijo -->
     <header>
+        <!-- Menu principal -->
         <nav class="menu">
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -14,17 +16,22 @@
                 <li><a href="#">Mensajes</a></li>
             </ul>
         </nav>
+        <!-- Logo Twitter -->
         <figure class="logo"><img src="assets/images/twitter-logo.svg" alt="Twitter logo"></figure>
+        <!-- Menu con elementos extra -->
         <nav class="extra">
             <form class="search-box"><input type="text" class="search-bar" placeholder="Buscar en Twitter"></form>
         </nav>
     </header>
+    <!-- Contenido principal -->
     <main>
+        <!-- Sección para escribir nuevo tweet -->
         <section id="new-tweet-box">
             <textarea placeholder="¿Qué está pasando?"></textarea>
             <p id="total-char" class="hidden">140</p>
             <button id="tweet-btn" class="hidden" type="button" disabled='true'>Twittear</button>
         </section>
+        <!-- Sección donde se colocan los tweets nuevos -->
         <section id="newsfeed"></section>
     </main>
     <script type="text/javascript" src="js/app.js"></script>

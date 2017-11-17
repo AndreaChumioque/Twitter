@@ -1,5 +1,9 @@
-/* Twitter color  #1DA1F2*/
+/* COLORES
+Twitter default     #1DA1F2
+Bkg color           #e6ecf0
+*/
 
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +47,7 @@ header {
     right: 0;
     height: 45px;
     background-color: #fff;
-    box-shadow: 2px 0px 2px grey;
+    box-shadow: 2px 0px 2px #6f7d86;
     font-weight: 900;
 }
 
@@ -121,7 +125,8 @@ textarea {
     resize: none;
     overflow: hidden;
     transition-duration: .25s;
-    height: 36px;
+    /* height: calc(1em + 25px); */
+    height: 2.75em;
 }
 
 textarea:focus{
@@ -129,7 +134,7 @@ textarea:focus{
 }
 
 .expand-box {
-    height: 50px;
+    height: 3.75em;
 }
 
 #tweet-btn {
