@@ -8,7 +8,7 @@ var height = textTweet.getAttribute('rows');
 
 window.addEventListener('click', checkClickOut);
 textTweet.addEventListener('click', expandTweetBox);
-textTweet.addEventListener('keyup', countChar)
+textTweet.addEventListener('keyup', countChar);
 textTweet.addEventListener('keyup', adjustHeight);
 tweetBtn.addEventListener('click', addTweet);
 
@@ -68,7 +68,7 @@ function addTweet(event) {
 
   if (newsfeed.children.length === 0)
     newsfeed.appendChild(newTweet);
-  else newsfeed.insertBefore(newTweet, newsfeed.firstElementChild)
+  else newsfeed.insertBefore(newTweet, newsfeed.firstElementChild);
 
   // Resetear textTweet al estado inicial
   textTweet.value = '';
