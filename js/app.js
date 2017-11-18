@@ -24,7 +24,7 @@ function expandTweetBox(event) {
 // Función para colapsar tweetBox al hacer click fuera
 function checkClickOut(event) {
   var tweetBox = document.getElementById('new-tweet-box');
-  if (event.target !== tweetBox && event.target.parentElement !== tweetBox && charCounter == 0) {
+  if (event.target !== tweetBox && event.target.parentElement !== tweetBox && charCounter === 0) {
     textTweet.className = '';
     textTweet.style.height = '';
     tweetBtn.className = 'hidden';
@@ -42,17 +42,17 @@ function countChar(event) {
 
   // Cambiar el color del contador
   switch (true) {
-    case charCounter > 120 && charCounter <= 130:
-      totalChar.style.color = '#F7B32B';
-      break;
-    case charCounter > 130 && charCounter <= 140:
-      totalChar.style.color = '#FE5E41';
-      break;
-    case charCounter > 140:
-      totalChar.style.color = '#C81D25';
-      break;
-    default:
-      totalChar.style.color = '';
+  case charCounter > 120 && charCounter <= 130:
+    totalChar.style.color = '#F7B32B';
+    break;
+  case charCounter > 130 && charCounter <= 140:
+    totalChar.style.color = '#FE5E41';
+    break;
+  case charCounter > 140:
+    totalChar.style.color = '#C81D25';
+    break;
+  default:
+    totalChar.style.color = '';
   }
 }
 // Función para reajustar el tamaño de tweetBox
@@ -66,7 +66,7 @@ function addTweet(event) {
   var newTweet = document.createElement('div');
   newTweet.textContent = textTweet.value;
 
-  if (newsfeed.children.length == 0)
+  if (newsfeed.children.length === 0)
     newsfeed.appendChild(newTweet);
   else newsfeed.insertBefore(newTweet, newsfeed.firstElementChild)
 
