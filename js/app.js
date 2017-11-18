@@ -64,7 +64,14 @@ function adjustHeight(event) {
 // Función para agregar tweet nuevo al newsfeed
 function addTweet(event) {
   var newTweet = document.createElement('div');
-  newTweet.textContent = textTweet.value;
+  var newContent = document.createElement('p');
+  newContent.textContent = textTweet.value;
+  newTweet.appendChild(newContent);
+
+  var time = document.createElement('p');
+  time.textContent = getTime();
+  time.className = 'time';
+  newTweet.appendChild(time);
 
   if (newsfeed.children.length === 0)
     newsfeed.appendChild(newTweet);
@@ -78,4 +85,12 @@ function addTweet(event) {
   totalChar.textContent = 140;
   charCounter = 0;
   countChar(event);
+}
+
+// Función para agregar fecha
+function getTime() {
+  var currentDate = new Date();
+  var hh = currentDate.getHours();
+  var mm = currentDate.getMinutes();
+  return hh + ':' + ((mm < 10 ? '0' : '') + mm);
 }

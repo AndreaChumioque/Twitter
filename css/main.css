@@ -195,3 +195,9 @@ textarea:focus{
     font-size: .8em;
     border-bottom: 1px solid #e6ecf0;
 }
+
+.time {
+    color: #6f7d86;
+    font-size: .9em;
+    margin-top: 5px;
+}
