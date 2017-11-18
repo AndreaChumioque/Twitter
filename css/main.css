@@ -19,6 +19,7 @@ main {
     background-color: #fff;
     width: 590px;
     margin: 55px auto 0;
+    float: left;
 }
 
 nav ul {
@@ -91,7 +92,6 @@ header nav ul li a {
     right: 3%;
 }
 
-/* Caja nuevo Tweet */
 .search-box input {
     border: .5px solid #6f7d86;
     border-radius: 20px;
@@ -109,10 +109,21 @@ header nav ul li a {
     color: #b4bec5;
 }
 
+/* Info de usuario */
+#user-info {
+    float: left;
+    width: 280px;
+    height: 200px;
+    background-color: #fff;
+    margin: 55px 15px 0;
+}
+
+/* Caja nuevo Tweet */
 #new-tweet-box {
     padding: 15px;
     overflow: auto;
     background-color: #EAF6FD;
+    border-bottom: 1px solid #e6ecf0;
 }
 
 textarea {
@@ -125,17 +136,16 @@ textarea {
     resize: none;
     overflow: hidden;
     transition-duration: .25s;
-    /* height: 2.75em; */
+    height: 2.75em;
 }
 
 textarea:focus{
     outline: none;
 }
 
-/* .expand-box {
+.expand-box {
     height: 3.75em;
-    overflow: hidden;
-} */
+}
 
 #tweet-btn {
     height: 30px;
@@ -177,11 +187,11 @@ textarea:focus{
 /* Estilos newsfeed */
 #newsfeed {
     background-color: #fff;
-    height: fill-available;
+    height: -webkit-fill-available;
 }
 
 #newsfeed div {
     padding: 15px;
     font-size: .8em;
-    border-bottom: .5px solid #D5EDFC;
+    border-bottom: 1px solid #e6ecf0;
 }

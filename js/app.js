@@ -26,6 +26,7 @@ function checkClickOut(event) {
   var tweetBox = document.getElementById('new-tweet-box');
   if (event.target !== tweetBox && event.target.parentElement !== tweetBox && charCounter == 0) {
     textTweet.className = '';
+    textTweet.style.height = '';
     tweetBtn.className = 'hidden';
     totalChar.className = 'hidden';
   }
@@ -35,7 +36,6 @@ function checkClickOut(event) {
 function countChar(event) {
   charCounter = textTweet.value.length;
   totalChar.textContent = 140 - charCounter;
-  // console.log(charCounter);
   if (charCounter > 0 && charCounter <= 140) {
     tweetBtn.disabled = false;
   } else tweetBtn.disabled = true;
@@ -57,22 +57,8 @@ function countChar(event) {
 }
 // Función para reajustar el tamaño de tweetBox
 function adjustHeight(event) {
-  // if (textTweet.scrollHeight) {
-  //   textTweet.style.transitionDuration = null;
-  //   textTweet.style.height = textTweet.scrollHeight + 'px';
-  // }
-
-  // if (charCounter > 0) {
-  //   textTweet.style.height = '47px';
-  //   textTweet.style.height = textTweet.scrollHeight + 'px';
-  // }
-
-  if (event.keyCode === 13) {
-    textTweet.setAttribute('rows', parseInt(height) + 1);
-
-    console.log(event.keyCode);
-  }
-
+  textTweet.style.height = 'auto';
+  textTweet.style.height = textTweet.scrollHeight + 'px';
 }
 
 // Función para agregar tweet nuevo al newsfeed
