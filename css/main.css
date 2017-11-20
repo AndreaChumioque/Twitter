@@ -131,7 +131,7 @@ header nav ul li a {
 
 /* Estilos del contenedor */
 #tweets {
-    width: 590px;
+    width: 60%;
     float: left;
 }
 
@@ -146,7 +146,6 @@ header nav ul li a {
 
 /* Caja nuevo Tweet */
 #new-tweet-box {
-    width: 590px;
     padding: 15px;
     overflow: auto;
     background-color: #EAF6FD;
@@ -163,6 +162,10 @@ textarea {
     resize: none;
     overflow: hidden;
     height: 2.75em;
+}
+
+textarea:placeholder {
+    font-size: 1em;
 }
 
 textarea:focus{
@@ -212,7 +215,6 @@ textarea:focus{
 
 /* Estilos newsfeed */
 #newsfeed {
-    width: 590px;
     background-color: #fff;
     height: -webkit-fill-available;
 }
