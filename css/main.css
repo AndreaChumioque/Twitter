@@ -162,7 +162,6 @@ textarea {
     display: block;
     resize: none;
     overflow: hidden;
-    transition-duration: .25s;
     height: 2.75em;
 }
 
