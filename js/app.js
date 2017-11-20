@@ -82,6 +82,7 @@ window.onload = function() {
     // Resetear textTweet al estado inicial
     textTweet.value = '';
     textTweet.className = '';
+    textTweet.style.height = '';
     tweetBtn.className = 'hidden';
     totalChar.className = 'hidden';
     totalChar.textContent = 140;

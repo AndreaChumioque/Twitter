@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">    <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
   <title>Twitter</title>
 </head>
+
 <body>
   <!-- Encabezado fijo -->
   <header>
-      <!-- Menu principal -->
-      <nav class="menu">
-          <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Notificaciones</a></li>
-              <li><a href="#">Mensajes</a></li>
-          </ul>
-      </nav>
-      <!-- Logo Twitter -->
-      <figure id="logo"><img src="assets/images/twitter-logo.svg" alt="Twitter logo"></figure>
-      <!-- Menu con elementos extra -->
-      <nav class="extra">
-          <form class="search-box"><input type="text" class="search-bar" placeholder="Buscar en Twitter"></form>
-      </nav>
+    <!-- Menu principal -->
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Notificaciones</a></li>
+        <li><a href="#">Mensajes</a></li>
+      </ul>
+    </nav>
+    <!-- Logo Twitter -->
+    <figure id="logo">
+      <img src="assets/images/twitter-logo.svg" alt="Twitter logo">
+    </figure>
+    <!-- Menu con elementos extra -->
+    <nav class="extra">
+      <form class="search-box">
+        <input type="text" class="search-bar" placeholder="Buscar en Twitter">
+      </form>
+    </nav>
   </header>
-
-  <aside id="user-info">
-        
-  </aside>
   <!-- Contenido principal -->
   <main>
+    <aside id="user-info">
+        <h3>Reto de Código</h3>
+        <hr>
+        <p>Soy Front-end Developer Jr.</p>
+        <p>Código: LIM172065</p>
+    </aside>
+    <section id="tweets">
       <!-- Sección para escribir nuevo tweet -->
-      <section id="new-tweet-box">
-          <textarea placeholder="¿Qué está pasando?"></textarea>
-          <p id="total-char" class="hidden">140</p>
-          <button id="tweet-btn" class="hidden" type="button" disabled='true'>Twittear</button>
-      </section>
+      <div id="new-tweet-box">
+        <textarea placeholder="¿Qué está pasando?"></textarea>
+        <p id="total-char" class="hidden">140</p>
+        <button id="tweet-btn" class="hidden" type="button" disabled='true'>Twittear</button>
+      </div>
       <!-- Sección donde se colocan los tweets nuevos -->
-      <section id="newsfeed"></section>
+      <div id="newsfeed"></div>
+    </section>
   </main>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
+
 </html>
