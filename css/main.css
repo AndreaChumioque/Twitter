@@ -223,6 +223,7 @@ textarea:focus{
     padding: 15px;
     font-size: .8em;
     border-bottom: 1px solid #e6ecf0;
+    word-wrap: break-word;
 }
 
 .time {
